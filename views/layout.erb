@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Cookbook</title>
+    <link rel="stylesheet" href="materialize.min.css">
+    <link href="material_fonts.css" rel="stylesheet">
+    <link rel="stylesheet" href="application.css">
+  </head>
+  <body>
+    <nav class="light-blue lighten-1" role="navigation">
+      <div class="nav-wrapper container"><a id="logo-container" href="#" class="brand-logo">Cookbook</a>
+        <ul class="right hide-on-med-and-down">
+          <li><a href="../add_recipe">Add recipe</a></li>
+        </ul>
+
+        <ul id="nav-mobile" class="side-nav" style="transform: translateX(-100%);">
+          <li><a href="../add_recipe">Add recipe</a></li>
+        </ul>
+        <a href="#" data-activates="nav-mobile" class="button-collapse"><i class="material-icons">menu</i></a>
+      </div>
+    </nav>
+    <div class="container">
+      <%= yield %>
+    </div>
+
+    <script src="jquery.min.js"></script>
+    <script src="materialize.min.js"></script>
+    <script src="application.js"></script>
+  </body>
+</html>

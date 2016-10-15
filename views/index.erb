@@ -1,0 +1,42 @@
+<h2>Recipes</h2>
+
+<form action="/web_search">
+  <input type="text" name="q">
+  <input type="submit">
+</form>
+
+<% @recipes.each do |recipe_group| %>
+  <div class="row">
+  <% recipe_group.each do |recipe| %>
+      <div class="col s12 m4">
+        <div>
+          <img class="responsive-img" src="images/default.jpg">
+          <% if recipe.tested %>
+            <div class="tested center green">
+              TESTED
+            </div>
+          <% end %>
+        </div>
+        <h5 class="center"><%= recipe.name %></h5>
+        <div class="row center">
+          <div class="col s6 m6">
+            <i class="small material-icons v-aling">query_builder</i>
+            <%= recipe.cooking_time %>
+          </div>
+          <div class="col s6 m6">
+            <i class="small material-icons v-aling">new_releases</i>
+            <%= recipe.difficulty %>
+          </div>
+        </div>
+        <p class="light">
+          <%= recipe.description %>
+        </p>
+      </div>
+  <% end %>
+  </div>
+<% end %>
+
+
+
+
+
