@@ -1,5 +1,8 @@
 <h3>Searching recipes with - <%= @search_term %> </h2>
 <% @search_results.each do |recipe_group| %>
+
+
+
   <div class="row">
   <% recipe_group.each do |recipe| %>
       <div class="col s12 m4">
@@ -24,7 +27,7 @@
         </p>
 
           <form method='post' action="import_recipe">
-            <input type="submit" value="Add">
+            <input type="submit" class="btn-add" value="Add" >
             <input type="hidden" name="name" value='<%=recipe.name%>'>
             <input type="hidden" name="description" value="<%=recipe.description%>">
             <input type="hidden" name="cooking_time" value='<%=recipe.cooking_time%>'>
@@ -36,5 +39,5 @@
   </div>
 <% end %>
 
-<a href="/">Go back to Cookbook</a>
 
+<a href="/">Go back to Cookbook</a>

@@ -2,6 +2,24 @@
   vertical-align:middle;
 }
 
-.done {
+.tested {
   color: #fff;
 }
+
+.btn-home {
+    background-color: green;
+    color: white;
+    border-radius: 3pt;
+    margin-bottom: 15px;
+    padding: 8px 10px;
+}
+
+
+.btn-add {
+    background-color: green;
+    color: white;
+    border-radius: 3pt;
+    margin-bottom: 15px;
+    padding: 8px 10px;
+}
+
